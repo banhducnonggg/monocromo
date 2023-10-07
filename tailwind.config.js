@@ -11,6 +11,7 @@ module.exports = {
         calc10: "calc(100% - 10px)",
         calc20: "calc(100% - 20px)",
         calc50: "calc(100% - 50px)",
+        calc100: "calc(100% - 100px)",
         thatsRight: '29rem'
       },
       screens: {
@@ -40,8 +41,8 @@ module.exports = {
         bgHeight: 'calc(100%-20px)'
       },
       inset: {
-        bgYInsetB: '40px',
-        bgXInset: '10px',
+        bgYInsetB: '75px',
+        bgXInset: '25px',
         bgInset: '10px'
       },
       backgroundImage: {
