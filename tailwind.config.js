@@ -45,7 +45,7 @@ module.exports = {
         bgInset: '10px'
       },
       backgroundImage: {
-        urlImg: "url('/eclipse.png')",
+        urlImg: "url('/bg1.png')",
         avaImg: "url('/ava-2.jpg')",
         arrowImg: "url('/doodlearrow.png')",
         fbImg: "url('/facebook.png')",
