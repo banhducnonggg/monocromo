@@ -12,7 +12,7 @@ module.exports = {
         calc20: "calc(100% - 20px)",
         calc50: "calc(100% - 50px)",
         calc100: "calc(100% - 100px)",
-        thatsRight: '29rem'
+        thatsRight: '28%'
       },
       screens: {
         'no-scroll': {'raw': '(max-height: 100vh)'},

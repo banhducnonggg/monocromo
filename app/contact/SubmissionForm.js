@@ -20,7 +20,7 @@ const SubmissionForm = () => {
   };
 
   return (
-    <div className="max-w-md mx-auto mt-24">
+    <div className="max-w-md mx-auto mt-44">
       <form onSubmit={handleSubmit}>
         <div className="mb-4">
           <input
