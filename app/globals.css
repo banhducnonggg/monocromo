@@ -1,0 +1,130 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary: 18 18 18;
+  };
+
+  body {
+    position: absolute;
+    color: #121212;
+  }
+  li {
+    display: inline;
+    float: right;
+    text-align: center;
+  }
+  /* ul {
+    background-color: #090c09;
+  } */
+
+  .custom-cursor {
+    position: fixed;
+    top: -20px;
+    left: -20px;
+    pointer-events: none;
+    z-index: 10;
+  }
+  
+  .glowing-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-image: linear-gradient(to top right, #9b7350, #e7554a);
+    mix-blend-mode: multiply;
+    opacity: 1;
+    transition: top 0.3s, left 0.3s;
+    /* z-index: 10; */
+  }
+  
+  .glowing-circle:hover {
+    box-shadow: 0 0 10px 20px rgba(255, 255, 255, 1);
+  }  
+
+  .ontop {
+    position: relative;
+    z-index: 9999;
+  }
+
+  /* Slider */
+  .slider-container {
+    width: 70%;
+    height: 50%;
+    position: relative;
+    top: 15%;
+    left: 15%;
+  }
+
+  .pageRedirect {
+    position: absolute;
+    width: 25rem;
+    left: calc(50% - 12.5rem);
+    top: calc(50% - 6rem)
+  }
+
+  .prev {
+    position: absolute;
+    left: 0;
+    height: 10rem;
+    top: calc(50% - 7.5rem);
+  }
+
+  .next {
+    position: absolute;
+    right: 0;
+    height: 10rem;
+    top: calc(50% - 7.5rem);
+  }
+
+  .dot-container {
+    position: relative;
+    width: 102px;
+    left: calc(50% - 51px);
+    top: 100%;
+    align-content: center;
+  }
+
+  .dot {
+    cursor: pointer;
+    height: 14px;
+    width: 14px;
+    margin: 10px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  
+  .doodlearrow {
+    transform: scale(-1);
+    rotate: 20deg;
+  }
+
+  .theImage {
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  .theAva:hover ~ .theImage{
+      visibility: visible;
+  }
+
+  /* Submission form */
+
+  .inputForm {
+    margin: 5px;
+  }
+  .inputForm::placeholder {
+    color: #c9c9c9;
+  }
+
+  .submitButton {
+    width: 150px;
+    left: calc(50% - 75px);
+  }
+
+  input, select, textarea{
+    color: #faf8ff;
+  }
+
+}
