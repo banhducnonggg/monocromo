@@ -54,7 +54,10 @@ module.exports = {
         gitImg: "url('/github.png')",
         igImg: "url('/instagram.png')",
         linkedinImg: "url('/linkedin.png')",
-        gmImg: "url('/gmail.png')"
+        gmImg: "url('/gmail.png')",
+        itImg: "url('/itpage.png')",
+        pImg: "url('/photographypage.jpg')",
+        dImg: "url('/designpage.png')"
       },
       dropShadow: {
         outGlow: '0 0 5px rgba(250, 248, 255, 1)'

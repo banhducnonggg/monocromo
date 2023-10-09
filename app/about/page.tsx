@@ -79,7 +79,7 @@ export default function Home() {
             <Link href='https://github.com/banhducnonggg' target='_blank'>
               <div className='ontop w-8 h-8 bg-gitImg bg-cover'></div>
             </Link><p>&nbsp;&nbsp;&nbsp;&nbsp;</p>
-            <Link href='https://www.flickr.com/people/186035845@N03/' target='_blank'>
+            <Link href='https://www.flickr.com/people/banhducnong/' target='_blank'>
               <div className='ontop w-8 h-8 bg-flickrImg bg-cover'></div>
             </Link><p>&nbsp;&nbsp;&nbsp;&nbsp;</p>
             <Link href='https://www.linkedin.com/in/banhducnong/' target='_blank'>
