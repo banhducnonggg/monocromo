@@ -84,9 +84,9 @@ const Slideshow = () => {
             <h2>{slides[currentSlide].label}Pop-up Content</h2>
             {/* Add your pop-up content here */}
             
-            {/*if (condition) {                      {/* IT */}
+            {/*if (IT) {                      {/* IT */}
               
-            {/*}} else if (condition) {               {/* Photography */}
+            {/*}} else if (Photography) {               {/* Photography */}
               
             {/*}} else {                              {/* Design */}
 
