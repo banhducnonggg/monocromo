@@ -2,9 +2,9 @@ import { useState } from 'react';
 import Link from 'next/link';
 
 const slides = [
-  { id: 1, label: 'Information Technology' },
-  { id: 2, label: 'Photography' },
-  { id: 3, label: 'Design' },
+  { id: 1, label: 'Information Technology', link: 'https://github.com/banhducnonggg' },
+  { id: 2, label: 'Photography', link: 'https://www.flickr.com/people/186035845@N03/' },
+  { id: 3, label: 'Design', link: 'https://www.instagram.com/monocromo.exe/' },
 ];
 
 const Slideshow = () => {
@@ -58,7 +58,6 @@ const Slideshow = () => {
       <div className="flex mt-4">
         {isPopupOpen ? null : (
           <>
-          
             <button
               className="prev ontop text-lColor font-navFont hover:text-lrColor"
               onClick={prevSlide}
@@ -71,27 +70,26 @@ const Slideshow = () => {
             >
               NEXT
             </button>
-            
           </>
         )}
       </div>
 
       {/* Render the pop-up conditionally */}
       {isPopupOpen && (
-        <div className="popup fixed inset-0 flex items-center justify-center z-9999">
+        <div className="popup fixed inset-0 flex items-center justify-center">
           <div className='backdrop-blur-xl backdrop-brightness-75 w-10/12 h-3/6 bg-transparent rounded-xl'>
 
-            <h2>{slides[currentSlide].label}Pop-up Content</h2>
+            <p className='absolute text-lrColor top-4 w-full text-center text-2xl font-titleFont z-50'>My favourite project(s) in {slides[currentSlide].label}</p>
             {/* Add your pop-up content here */}
-            
-            {/*if (IT) {                      {/* IT */}
-              
-            {/*}} else if (Photography) {               {/* Photography */}
-              
-            {/*}} else {                              {/* Design */}
 
-            {/* */}
-            <button onClick={togglePopup}>Close</button>
+
+
+            <p className='absolute text-lrColor bottom-4 w-1/2 text-left text-xl font-titleFont left-8'>
+              <Link href={slides[currentSlide].link} target='_blank'>
+              See more of mine..
+              </Link>
+            </p>
+            <button className='absolute text-lrColor bottom-4 w-1/2 text-right text-xl font-titleFont right-8' onClick={togglePopup}>Close</button>
 
           </div>
         </div>
