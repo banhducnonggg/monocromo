@@ -56,7 +56,7 @@ const Slideshow = () => {
         ))}
       </div>
       <div className="flex mt-4">
-        {/* {isPopupOpen ? null : ( */}
+        {isPopupOpen ? null : (
           <>
             <button
               className="prev ontop text-lColor font-navFont hover:text-lrColor"
@@ -71,13 +71,13 @@ const Slideshow = () => {
               NEXT
             </button>
           </>
-        {/* )} */}
+        )}
       </div>
 
       {/* Render the pop-up conditionally */}
       {isPopupOpen && (
         <div className="popup fixed inset-0 flex items-center justify-center">
-          <div className='backdrop-blur-xl backdrop-brightness-75 w-10/12 h-3/6 bg-transparent rounded-xl flex flex-col items-center justify-center'> {/* Added flex classes */}
+          <div className='backdrop-blur-xl backdrop-brightness-75 w-6/12 h-3/6 bg-transparent rounded-xl flex flex-col items-center justify-center'> {/* Added flex classes */}
             <p className='absolute text-lrColor top-4 w-full text-center text-2xl font-titleFont z-50'>My favorite project in {slides[currentSlide].label}</p>
             {/* Add your pop-up content here */}
             {slides[currentSlide].id === 1 && (
@@ -107,12 +107,12 @@ const Slideshow = () => {
               </div>
             )}
 
-            <p className='absolute text-lrColor bottom-4 w-1/2 text-left text-xl font-titleFont left-8'>
+            <p className='absolute text-lColor hover:text-lrColor bottom-4 w-1/2 text-left text-xl font-regFont left-8'>
               <Link href={slides[currentSlide].link} target='_blank'>
                 See more..
               </Link>
             </p>
-            <button className='absolute text-lrColor bottom-4 w-1/2 text-right text-xl font-titleFont right-8' onClick={togglePopup}>Close</button>
+            <button className='absolute text-lColor hover:text-lrColor bottom-4 w-1/2 text-right text-xl font-regFont right-8' onClick={togglePopup}>Close</button>
           </div>
         </div>
       )}

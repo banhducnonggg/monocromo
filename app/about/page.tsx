@@ -50,21 +50,18 @@ export default function Home() {
           <p className='ontop font-regFont text-drColor text-center text-xl pt-2'>
             You can call me Alvin/Nam Anh as well!
           </p>
-          <p className='ontop font-regFont text-lColor text-left start-2/4 top-36 text-md pt-2'>
-            I’m a <b className='text-lrColor'>soon-to-be</b> graduate from the University of Calgary with a major in <b className='text-lrColor'>Computer Science.</b> <br />
-            I’m obsessed with <b className='text-lrColor'>game development,</b> have 2 years of <b className='text-lrColor'>front-end web dev</b> experience, <br />
-            and dabble in <b className='text-lrColor'>photography</b> and <b className='text-lrColor'>design.</b> <br />
-            Oh, and if you want a <b className='text-lrColor'>cappuccino with a cat on top?</b> Sure, let me make it for you!<br/ >
-            Ready to join me on this wild ride of <b className='text-lrColor'>creativity, code,</b>and <b className='text-lrColor'>caffeine?</b> <br />
-            Let’s make some <b className='text-lrColor'>magic</b> together!
-          </p>
-          <div className='theAva absolute w-72 h-72 bg-avaImg bg-bottom bg-cover left-80 top-52'></div>
-          <div className='theImage select-none'>
-            <div className='absolute ontop doodlearrow w-20 h-20 bg-arrowImg bg-contain bg-no-repeat top-40 left-thatsRight'></div>
-            <p className='ontop font-regFont text-dColor text-left start-1/3 bottom-20 text-md'>
-              That's right, I'm mesmerized by cartoon characters' hairstyles
+          <div className='absolute flex items-center justify-center p-4 h-1/2 w-full top-1/4'>
+            <div className='theAva w-72 h-72 bg-avaImg bg-bottom bg-cover p-4'></div>
+            <p className='ontop font-regFont text-lColor text-left text-md pt-2 p-4'>
+              I’m a <b className='text-lrColor'>soon-to-be</b> graduate from the University of Calgary with a degree in <b className='text-lrColor'>Computer Science.</b> <br />
+              I’m obsessed with <b className='text-lrColor'>game development,</b> having 2 years of <b className='text-lrColor'>front-end web dev</b> experience, <br />
+              and dabbling in <b className='text-lrColor'>photography</b> and <b className='text-lrColor'>design.</b> <br />
+              Oh, and if you want a <b className='text-lrColor'>cappuccino with a cat on top?</b> Sure, let me make it for you!<br/ >
+              Ready to join me on this wild ride of <b className='text-lrColor'>creativity, codes,</b> and <b className='text-lrColor'>caffeine?</b> <br />
+              Let’s make some <b className='text-lrColor'>magic</b> together!
             </p>
           </div>
+
           <div className='flex absolute inline w-auto right-4 bottom-4 h-fit'>
             <p className='ontop font-navFont text-lrColor text-left text-md start 96'>
               Connect with me via~ &nbsp;&nbsp;&nbsp;
