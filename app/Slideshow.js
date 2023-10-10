@@ -56,7 +56,22 @@ const Slideshow = () => {
         ))}
       </div>
       <div className="flex mt-4">
-        {isPopupOpen ? null : (
+        {isPopupOpen ? (
+          <>
+          <button
+            className="prev left-72 ontop text-lColor font-navFont hover:text-lrColor"
+            onClick={prevSlide}
+          >
+            PREV
+          </button>
+          <button
+            className="next right-72 ontop text-lColor font-navFont hover:text-lrColor"
+            onClick={nextSlide}
+          >
+            NEXT
+          </button>
+        </>
+        ) : (
           <>
             <button
               className="prev ontop text-lColor font-navFont hover:text-lrColor"
