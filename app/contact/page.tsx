@@ -4,29 +4,42 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Cursor from '../Cursor'
 import SubmissionForm from './SubmissionForm'
-
+import { useState } from 'react';
 
 export default function Home() {
+  const [showNav, setShowNav] = useState(false);
+
+  const toggleNav = () => {
+    setShowNav(!showNav);
+  };
+
   return (
     <body className='no-scroll overflow-hidden overscroll-none select-none nocursor'>
       <main className='w-full h-screen bg-bgColor z-0 no-scroll overflow-hidden overscroll-none'>
         <Cursor />
         <ul className='ontop w-full h-16 p0 overflow-hidden overscroll-none'>
-          <li className='ontop float-left h-fit ml-5'>
-            <button className='ontop h-fit mb-1 z-50 nocursor btn'>
+        <li className={`ontop float-left h-fit ml-5 ${showNav ? 'hide' : 'show'}`}>
+            <button className={`ontop h-fit mb-1 z-50 nocursor btn ${showNav ? 'hide' : 'show'}`}>
               <Link className='nocursor btn' href="/">
                 <img className='ontop my-2 ml-2 h-14' src='blank-light.png'></img>
               </Link>
             </button>
           </li>
-          <li className='ontop'>
-            <button className='ontop my-6 mr-7 z-50 nocursor btn'>
+          <li className='ontop nocursor'>
+            <button className='navbtn ontop mt-6 mr-7 z-50 nocursor btn' onClick={toggleNav}>
+              <svg className='fill-lrColor w-6 h-6' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M 2 5 L 2 7 L 22 7 L 22 5 L 2 5 z M 2 11 L 2 13 L 22 13 L 22 11 L 2 11 z M 2 17 L 2 19 L 22 19 L 22 17 L 2 17 z"></path>
+              </svg>
+            </button>
+          </li>
+          <li className={`ontop nocursor ${showNav ? 'show' : 'hide'}`}>
+            <button className={`ontop my-6 mr-7 z-50 nocursor btn ${showNav ? 'show' : 'hide'}`}>
               <Link className='ontop text-lrColor text-xl font-regFont drop-shadow-outGlow nocursor btn' href="/contact">
                 Contact
               </Link>
             </button>
           </li>
-          <li className='ontop'>
+          <li className={`ontop ${showNav ? 'show' : 'hide'}`}>
             <button className='my-6 mr-7 z-50 nocursor btn'>
               <Link className='nocursor btn' href="/about">
                 <svg className='fill-lColor w-6 h-6 hover:fill-lrColor hover:drop-shadow-outGlow' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -35,7 +48,7 @@ export default function Home() {
               </Link>
             </button>
           </li>
-          <li className='ontop'>
+          <li className={`ontop ${showNav ? 'show' : 'hide'}`}>
             <button className='ontop my-6 mr-7 z-50 nocursor btn'>
               <Link className='nocursor btn' href="/">
                 <svg className='fill-lColor w-6 h-6 hover:fill-lrColor hover:drop-shadow-outGlow' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" >
@@ -45,7 +58,7 @@ export default function Home() {
             </button>
           </li>
         </ul>
-        <div className='w-calc50 minus-20 h-calc100 minus-50 inset-x-bgXInset inset-y-bgYInsetB rounded-lg fixed z-10 bg-urlImg bg-cover bg-top overflow-hidden overscroll-none nocursor'>
+        <div className='mainpart w-calc50 minus-20 h-calc100 minus-50 inset-x-bgXInset inset-y-bgYInsetB rounded-lg fixed z-10 bg-urlImg bg-cover bg-top overflow-hidden overscroll-none nocursor'>
           <Cursor />
           <p className='ontop font-titleFont text-drColor text-center text-3xl pt-11'>
             Hey,
