@@ -26,7 +26,7 @@ export default function Home() {
           <li className={`ontop float-left h-fit ml-5 ${showNav ? 'hide' : 'show'}`}>
             <button className={`ontop h-fit mb-1 z-50 nocursor btn ${showNav ? 'hide' : 'show'}`}>
               <Link className='nocursor btn' href="/">
-                <img className='ontop my-2 ml-2 h-14' src='blank-light.png'></img>
+                <img className='ontop my-2 ml-2 h-14' src='blank-light.png' alt='logo'></img>
               </Link>
             </button>
           </li>
@@ -66,7 +66,7 @@ export default function Home() {
         <div className='mainpart w-calc50 minus-20 h-calc100 minus-50 inset-x-bgXInset inset-y-bgYInsetB rounded-lg fixed z-10 bg-urlImg bg-cover bg-top overflow-hidden overscroll-none nocursor'>
           <Cursor />
           <p className='ontop font-titleFont text-drColor text-center text-3xl pt-11'>
-            Hi, I'm mono-cromo
+            Hi, I&apos;m mono-cromo
           </p>
           <p className='ontop font-regFont text-drColor text-center text-xl pt-2'>
             You can call me Alvin/Nam Anh as well!

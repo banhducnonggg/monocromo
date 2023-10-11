@@ -21,7 +21,7 @@ export default function Home() {
           <li className={`ontop float-left h-fit ml-5 ${showNav ? 'hide' : 'show'}`}>
             <button className={`ontop h-fit mb-1 z-50 nocursor btn ${showNav ? 'hide' : 'show'}`}>
               <Link className='nocursor btn' href="/">
-                <img className='ontop my-2 ml-2 h-14' src='blank-light.png'></img>
+                <img className='ontop my-2 ml-2 h-14' src='blank-light.png' alt='logo'></img>
               </Link>
             </button>
           </li>
