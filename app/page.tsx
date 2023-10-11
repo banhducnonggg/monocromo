@@ -18,8 +18,8 @@ export default function Home() {
       <main className='w-full h-screen bg-bgColor z-0 no-scroll overflow-hidden overscroll-none nocursor'>
         <Cursor />
         <ul className='ontop w-full h-16 p0 overflow-hidden overscroll-none nocursor'>
-          <li className='ontop float-left h-fit ml-5'>
-            <button className='ontop h-fit mb-1 z-50 nocursor btn'>
+          <li className={`ontop float-left h-fit ml-5 ${showNav ? 'hide' : 'show'}`}>
+            <button className={`ontop h-fit mb-1 z-50 nocursor btn ${showNav ? 'hide' : 'show'}`}>
               <Link className='nocursor btn' href="/">
                 <img className='ontop my-2 ml-2 h-14' src='blank-light.png'></img>
               </Link>
@@ -58,7 +58,7 @@ export default function Home() {
             </button>
           </li>
         </ul>
-        <div className='w-calc50 minus-20 h-calc100 minus-50 inset-x-bgXInset inset-y-bgYInsetB rounded-lg fixed z-10 bg-urlImg bg-cover bg-top overflow-hidden overscroll-none nocursor'>
+        <div className='mainpart w-calc50 minus-20 h-calc100 minus-50 inset-x-bgXInset inset-y-bgYInsetB rounded-lg fixed z-10 bg-urlImg bg-cover bg-top overflow-hidden overscroll-none nocursor'>
           <Cursor />
           <p className='ontop font-titleFont text-drColor text-center text-3xl pt-11'>
             Hi there,

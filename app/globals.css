@@ -158,7 +158,13 @@
 
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 800px) { /*min-width: 415px*/
+  .mainpart {
+    width: calc(100% - 20px);
+    left: 10px;
+    height: auto;
+    bottom: 10px;
+  }
   .navbtn {
     display: inline;
   }
@@ -169,5 +175,30 @@
 
   .show {
     display: inline;
+  }
+  
+  .discoverController {
+    display: none;
+  }
+
+  .dot-container {
+    top: 100%;
+  }
+
+  .popupSelection {
+    width: 90%;
+  }
+
+  .popupIntroduction {
+    font-size: large;
+  }
+
+  .popupController {
+    font-size: medium;
+  }
+
+  .popupImgContainer {
+    width: 75%;
+    font-size: small;
   }
 }

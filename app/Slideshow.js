@@ -55,7 +55,7 @@ const Slideshow = () => {
           />
         ))}
       </div>
-      <div className="flex mt-4 nocursor">
+      <div className="flex mt-4 nocursor discoverController">
         {isPopupOpen ? (
           <>
           <button
@@ -92,42 +92,42 @@ const Slideshow = () => {
       {/* Render the pop-up conditionally */}
       {isPopupOpen && (
         <div className="popup fixed inset-0 flex items-center justify-center nocursor">
-          <div className='backdrop-blur-xl backdrop-brightness-75 w-6/12 h-3/6 bg-transparent rounded-xl flex flex-col items-center justify-center'> {/* Added flex classes */}
-            <p className='absolute text-lrColor top-4 w-full text-center text-2xl font-titleFont z-50'>My favorite project in {slides[currentSlide].label}</p>
+          <div className='popupSelection backdrop-blur-xl backdrop-brightness-75 w-6/12 h-3/6 bg-transparent rounded-xl flex flex-col items-center justify-center'> {/* Added flex classes */}
+            <p className='popupIntroduction absolute text-lrColor top-4 w-full text-center text-2xl font-titleFont z-50'>My favorite project in {slides[currentSlide].label}</p>
             {/* Add your pop-up content here */}
             {slides[currentSlide].id === 1 && (
-              <div className='w-2/6 h-3/6 flex items-center justify-center hover:text-lrColor nocursor btn'> {/* Center the content */}
+              <div className='popupImgContainer w-2/6 h-3/6 flex items-center justify-center hover:text-lrColor nocursor btn'> {/* Center the content */}
                 <a className='w-full h-full nocursor btn' href='http://namanh-vu.com/' target='_blank'>
-                  <div className='w-full h-full bg-itImg bg-contain bg-center bg-no-repeat btn'></div>
+                  <div className='popupImg w-full h-full bg-itImg bg-contain bg-center bg-no-repeat btn'></div>
                   <p className='text-center font-navFont text-md text-lColor hover:text-lrColor btn'>My first resume website</p>
                 </a>
               </div>
             )}
 
             {slides[currentSlide].id === 2 && (
-              <div className='w-2/6 h-3/6 flex items-center justify-center hover:text-lrColor btn'> {/* Center the content */}
+              <div className='popupImgContainer w-2/6 h-3/6 flex items-center justify-center hover:text-lrColor btn'> {/* Center the content */}
                 <a className='w-full h-full nocursor btn' href='https://www.flickr.com/photos/banhducnong/albums/72177720311791961' target='_blank'>
-                  <div className='w-full h-full bg-pImg bg-contain bg-center bg-no-repeat btn'></div>
+                  <div className='popupImg w-full h-full bg-pImg bg-contain bg-center bg-no-repeat btn'></div>
                   <p className='text-center font-navFont text-md text-lColor hover:text-lrColor btn'>Back to Vietnam trip</p>
                 </a>
               </div>
             )}
 
             {slides[currentSlide].id === 3 && (
-              <div className='w-2/6 h-3/6 flex items-center justify-center hover:text-lrColor btn'> {/* Center the content */}
+              <div className='popupImgContainer w-2/6 h-3/6 flex items-center justify-center hover:text-lrColor btn'> {/* Center the content */}
                 <a className='w-full h-full nocursor btn' href='https://www.facebook.com/dongphucgau.vn/posts/pfbid02pM6uWhPXNzHmFWRmCKRt58R7mvsabCqzAEdwNLAZ4YowpC8gA4daB4pe9ytqqnrUl' target='_blank'>
-                  <div className='w-full h-full bg-dImg bg-contain bg-center bg-no-repeat btn'></div>
+                  <div className='popupImg w-full h-full bg-dImg bg-contain bg-center bg-no-repeat btn'></div>
                   <p className='text-center font-navFont text-md text-lColor hover:text-lrColor btn'>Design media for an uniform brand</p>
                 </a>
               </div>
             )}
 
-            <p className='absolute text-lColor hover:text-lrColor bottom-4 w-auto text-left text-xl font-regFont left-8 nocursor'>
+            <p className='popupController absolute text-lColor hover:text-lrColor bottom-4 w-auto text-left text-xl font-regFont left-8 nocursor'>
               <Link className='nocursor btn' href={slides[currentSlide].link} target='_blank'>
                 See more..
               </Link>
             </p>
-            <button className='absolute text-lColor hover:text-lrColor bottom-4 w-auto text-right text-xl font-regFont right-8 nocursor btn' onClick={togglePopup}>Close</button>
+            <button className='popupController absolute text-lColor hover:text-lrColor bottom-4 w-auto text-right text-xl font-regFont right-8 nocursor btn' onClick={togglePopup}>Close</button>
           </div>
         </div>
       )}
