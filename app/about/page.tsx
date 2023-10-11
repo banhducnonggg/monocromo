@@ -10,22 +10,22 @@ export default function Home() {
         <Cursor />
         <ul className='ontop w-full h-16 p0 overflow-hidden overscroll-none'>
           <li className='ontop float-left h-fit ml-5'>
-            <button className='ontop h-fit mb-1 z-50 nocursor hoveredcursor'>
-              <Link className='nocursor hoveredcursor' href="/">
+            <button className='ontop h-fit mb-1 z-50 nocursor btn'>
+              <Link className='nocursor btn' href="/">
                 <img className='ontop my-2 ml-2 h-14' src='blank-light.png'></img>
               </Link>
             </button>
           </li>
           <li className='ontop'>
-            <button className='ontop my-6 mr-7 z-50 nocursor hoveredcursor'>
-              <Link className='ontop text-lColor text-xl font-regFont hover:text-lrColor hover:drop-shadow-outGlow nocursor hoveredcursor' href="/contact">
+            <button className='ontop my-6 mr-7 z-50 nocursor btn'>
+              <Link className='ontop text-lColor text-xl font-regFont hover:text-lrColor hover:drop-shadow-outGlow nocursor btn' href="/contact">
                 Contact
               </Link>
             </button>
           </li>
           <li className='ontop'>
-            <button className='my-6 mr-7 z-50 nocursor hoveredcursor'>
-              <Link className='nocursor hoveredcursor' href="/about">
+            <button className='my-6 mr-7 z-50 nocursor btn'>
+              <Link className='nocursor btn' href="/about">
                 <svg className='fill-lrColor w-6 h-6 drop-shadow-outGlow' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                   <path fillRule="evenodd" d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z" clipRule="evenodd" />
                 </svg>
@@ -33,8 +33,8 @@ export default function Home() {
             </button>
           </li>
           <li className='ontop'>
-            <button className='ontop my-6 mr-7 z-50 nocursor hoveredcursor'>
-              <Link className='nocursor hoveredcursor' href="/">
+            <button className='ontop my-6 mr-7 z-50 nocursor btn'>
+              <Link className='nocursor btn' href="/">
                 <svg className='fill-lColor w-6 h-6 hover:fill-lrColor hover:drop-shadow-outGlow' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" >
                   <path fillRule="evenodd" d="M2.25 6a3 3 0 013-3h13.5a3 3 0 013 3v12a3 3 0 01-3 3H5.25a3 3 0 01-3-3V6zm3.97.97a.75.75 0 011.06 0l2.25 2.25a.75.75 0 010 1.06l-2.25 2.25a.75.75 0 01-1.06-1.06l1.72-1.72-1.72-1.72a.75.75 0 010-1.06zm4.28 4.28a.75.75 0 000 1.5h3a.75.75 0 000-1.5h-3z" clipRule="evenodd" />
                 </svg>
@@ -67,22 +67,22 @@ export default function Home() {
               Connect with me via~ &nbsp;&nbsp;&nbsp;
             </p>
             <p className='nocursor'>&nbsp;</p>
-            <Link className='nocursor hoveredcursor' href='https://www.instagram.com/monocromo.exe/' target='_blank'>
+            <Link className='nocursor btn' href='https://www.instagram.com/monocromo.exe/' target='_blank'>
               <div className='ontop w-8 h-8 bg-igImg bg-cover hover:drop-shadow-outGlow'></div>
             </Link><p>&nbsp;&nbsp;&nbsp;&nbsp;</p>
-            <Link className='nocursor hoveredcursor' href='https://www.facebook.com/anhvn0811/' target='_blank'>
+            <Link className='nocursor btn' href='https://www.facebook.com/anhvn0811/' target='_blank'>
               <div className='ontop w-8 h-8 bg-fbImg bg-cover hover:drop-shadow-outGlow'></div>
             </Link><p>&nbsp;&nbsp;&nbsp;&nbsp;</p>
-            <Link className='nocursor hoveredcursor' href='https://github.com/banhducnonggg' target='_blank'>
+            <Link className='nocursor btn' href='https://github.com/banhducnonggg' target='_blank'>
               <div className='ontop w-8 h-8 bg-gitImg bg-cover hover:drop-shadow-outGlow'></div>
             </Link><p>&nbsp;&nbsp;&nbsp;&nbsp;</p>
-            <Link className='nocursor hoveredcursor' href='https://www.flickr.com/people/banhducnong/' target='_blank'>
+            <Link className='nocursor btn' href='https://www.flickr.com/people/banhducnong/' target='_blank'>
               <div className='ontop w-8 h-8 bg-flickrImg bg-cover hover:drop-shadow-outGlow'></div>
             </Link><p>&nbsp;&nbsp;&nbsp;&nbsp;</p>
-            <Link className='nocursor hoveredcursor' href='https://www.linkedin.com/in/banhducnong/' target='_blank'>
+            <Link className='nocursor btn' href='https://www.linkedin.com/in/banhducnong/' target='_blank'>
               <div className='ontop w-8 h-8 bg-linkedinImg bg-cover hover:drop-shadow-outGlow'></div>
             </Link><p>&nbsp;&nbsp;&nbsp;&nbsp;</p>
-            <Link className='nocursor hoveredcursor' href='mailto: monocromo0811@gmail.com' target='_blank'>
+            <Link className='nocursor btn' href='mailto: monocromo0811@gmail.com' target='_blank'>
               <div className='ontop w-8 h-8 bg-gmImg bg-cover hover:drop-shadow-outGlow'></div>
             </Link>
           </div>

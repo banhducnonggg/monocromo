@@ -23,7 +23,6 @@
   .nocursor {
     cursor: none;
   }
-  
 
   .custom-cursor {
     position: fixed;
@@ -39,36 +38,32 @@
     border-radius: 50%;
     background-image: linear-gradient(to top right, #432371 , #FAAE7B);
     mix-blend-mode: screen;
-    opacity: 0.75;
+    opacity: 0.6;
     transition: top 0.3s, left 0.3s;
     filter: blur(11px);
     /* z-index: 10; */
   }
 
-  /* Hover cursor setting */
-  .hoveredcursor:hover + .custom-cursor {
+  /* Click on cursor effect */
+  .custom-cursor.clicking {
     position: fixed;
-    top: -10px;
-    left: -10px;
+    top: -15px;
+    left: -15px;
     pointer-events: none;
     z-index: 10;
   }
 
-  .hoveredcursor:hover + .glowing-circle {
-    width: 20px;
-    height: 20px;
+  .glowing-circle.clicking {
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     background-image: linear-gradient(to top right, #432371 , #FAAE7B);
     mix-blend-mode: screen;
     opacity: 1;
     transition: top 0.3s, left 0.3s;
-    filter: blur(5px);
-  }
+    filter: blur(11px);
 
-/*   
-  .glowing-circle:hover {
-    box-shadow: 0 0 10px 20px rgba(255, 255, 255, 1);
-  }   */
+  }
 
   .ontop {
     position: relative;
