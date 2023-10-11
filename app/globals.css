@@ -11,10 +11,15 @@
     position: absolute;
     color: #121212;
   }
+
   li {
     display: inline;
     float: right;
     text-align: center;
+  }
+
+  .navbtn {
+    display: none;
   }
   /* ul {
     background-color: #090c09;
@@ -151,4 +156,18 @@
     color: #faf8ff;
   }
 
+}
+
+@media only screen and (max-width: 800px) {
+  .navbtn {
+    display: inline;
+  }
+
+  .hide {
+    display: none;
+  }
+
+  .show {
+    display: inline;
+  }
 }

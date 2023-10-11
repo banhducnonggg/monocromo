@@ -4,8 +4,15 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Cursor from './Cursor'
 import Slideshow from './Slideshow'
+import { useState } from 'react';
 
 export default function Home() {
+  const [showNav, setShowNav] = useState(false);
+
+  const toggleNav = () => {
+    setShowNav(!showNav);
+  };
+
   return (
     <body className='no-scroll overflow-hidden overscroll-none select-none nocursor'>
       <main className='w-full h-screen bg-bgColor z-0 no-scroll overflow-hidden overscroll-none nocursor'>
@@ -19,13 +26,20 @@ export default function Home() {
             </button>
           </li>
           <li className='ontop nocursor'>
-            <button className='ontop my-6 mr-7 z-50 nocursor btn'>
+            <button className='navbtn ontop mt-6 mr-7 z-50 nocursor btn' onClick={toggleNav}>
+              <svg className='fill-lrColor w-6 h-6 drop-shadow-outGlow' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M 2 5 L 2 7 L 22 7 L 22 5 L 2 5 z M 2 11 L 2 13 L 22 13 L 22 11 L 2 11 z M 2 17 L 2 19 L 22 19 L 22 17 L 2 17 z"></path>
+              </svg>
+            </button>
+          </li>
+          <li className={`ontop nocursor ${showNav ? 'show' : 'hide'}`}>
+            <button className={`ontop my-6 mr-7 z-50 nocursor btn ${showNav ? 'show' : 'hide'}`}>
               <Link className='ontop text-lColor text-xl font-regFont hover:text-lrColor hover:drop-shadow-outGlow nocursor btn' href="/contact">
                 Contact
               </Link>
             </button>
           </li>
-          <li className='ontop'>
+          <li className={`ontop ${showNav ? 'show' : 'hide'}`}>
             <button className='my-6 mr-7 z-50 nocursor btn'>
               <Link className='nocursor btn' href="/about">
                 <svg className='fill-lColor w-6 h-6 hover:fill-lrColor hover:drop-shadow-outGlow' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -34,7 +48,7 @@ export default function Home() {
               </Link>
             </button>
           </li>
-          <li className='ontop'>
+          <li className={`ontop ${showNav ? 'show' : 'hide'}`}>
             <button className='ontop my-6 mr-7 z-50 nocursor btn'>
               <Link className='nocursor btn' href="/">
                 <svg className='fill-lrColor w-6 h-6 drop-shadow-outGlow' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" >
