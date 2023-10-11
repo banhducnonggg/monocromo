@@ -18,6 +18,20 @@
     text-align: center;
   }
 
+  .introBox {
+    justify-content: end;
+  }
+
+  .conContainer {
+    right: 0;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .conBtn {
+    display: none;
+  }
+
   .navbtn {
     display: none;
   }
@@ -200,5 +214,26 @@
   .popupImgContainer {
     width: 75%;
     font-size: small;
+  }
+
+  .introTab {
+    flex-direction: column;
+  }
+
+  .conIntro {
+    display: none;
+  }
+
+  .conBtn {
+    display: inline;
+    right: 0;
+    bottom: 0;
+  }
+
+  .conContainer {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    left: 11%;
   }
 }
