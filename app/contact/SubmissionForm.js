@@ -20,7 +20,7 @@ const SubmissionForm = () => {
             name="name"
             placeholder='What should I call you?'
             value={name}
-            // onChange={(e) => setName(e.target.value)}
+            onChange={(e) => setName(e.target.value)}
             required
           />
           <ValidationError prefix="Name" field="name" errors={state.errors} />
@@ -33,7 +33,7 @@ const SubmissionForm = () => {
             name='email'
             placeholder='Which email should I reply to?'
             value={email}
-            // onChange={(e) => setEmail(e.target.value)}
+            onChange={(e) => setEmail(e.target.value)}
             required
           />
           <ValidationError prefix="Email" field="email" errors={state.errors} />
