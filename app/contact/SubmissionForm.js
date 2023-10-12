@@ -21,7 +21,7 @@ const SubmissionForm = () => {
 
   return (
     <div className="flex items-center justify-center w-auto h-2/3">
-      <form onSubmit={handleSubmit} action="https://formspree.io/f/mpzgkpdo" method="POST">
+      <form onSubmit={handleSubmit} action="https://formspree.io/f/xbjvqgov" method="POST">
         <div className="mb-4">
           <input
             className="inputForm text-md border-2 border-lColor bg-dColor rounded-xl px-3 py-2 w-full focus:drop-shadow-outGlow focus:border-lColor nocursor btn"
