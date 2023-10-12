@@ -5,6 +5,7 @@ import Link from 'next/link'
 import Cursor from './Cursor'
 import Slideshow from './Slideshow'
 import { useState } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 
 export default function Home() {
   const [showNav, setShowNav] = useState(false);
@@ -69,6 +70,7 @@ export default function Home() {
           <Slideshow />
         </div>
       </main>
+      <Analytics />
     </body>
   )
 }
