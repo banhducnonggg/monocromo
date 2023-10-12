@@ -41,11 +41,6 @@ const SubmissionForm = () => {
             onChange={(e) => setName(e.target.value)}
             required
           />
-          <ValidationError 
-            prefix="Name" 
-            field="name"
-            errors={state.errors}
-          />
         </div>
         <div className="mb-4">
           <input
@@ -56,11 +51,6 @@ const SubmissionForm = () => {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
-          />
-          <ValidationError 
-            prefix="Email" 
-            field="email"
-            errors={state.errors}
           />
         </div>
         <div className="mb-4">
@@ -80,7 +70,7 @@ const SubmissionForm = () => {
         <button
           className="fixed submitButton text-md bg-lColor hover:bg-dColor text-dColor hover:text-lColor hover:drop-shadow-outGlow font-titleFont py-2 px-4 rounded-xl nocursor btn"
           type="submit"
-          disabled={state.submitting}
+          onClick={handleSubmit}
         >
           Let it goo ~
         </button>
