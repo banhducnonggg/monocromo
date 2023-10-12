@@ -70,7 +70,6 @@ const SubmissionForm = () => {
         <button
           className="fixed submitButton text-md bg-lColor hover:bg-dColor text-dColor hover:text-lColor hover:drop-shadow-outGlow font-titleFont py-2 px-4 rounded-xl nocursor btn"
           type="submit"
-          onClick={handleSubmit}
         >
           Let it goo ~
         </button>
