@@ -1,23 +1,32 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
+import { useForm, ValidationError } from '@formspree/react';
 
 const SubmissionForm = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [category, setCategory] = useState('');
+  const [state, handleSubmit] = useForm("mpzgkpdo");
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    // Do something with the form data
-    console.log('Name:', name);
-    console.log('Email:', email);
-    console.log('Category:', category);
-
-    // Reset form fields
+  if (state.succeeded) {
     setName('');
     setEmail('');
     setCategory('');
-  };
+    return <p>Thanks for contacting!</p>;
+  }
+
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+
+  //   // Do something with the form data
+  //   console.log('Name:', name);
+  //   console.log('Email:', email);
+  //   console.log('Category:', category);
+
+  //   // Reset form fields
+  //   setName('');
+  //   setEmail('');
+  //   setCategory('');
+  // };
 
   return (
     <div className="flex items-center justify-center w-auto h-2/3">
@@ -32,6 +41,11 @@ const SubmissionForm = () => {
             onChange={(e) => setName(e.target.value)}
             required
           />
+          <ValidationError 
+            prefix="Name" 
+            field="name"
+            errors={state.errors}
+          />
         </div>
         <div className="mb-4">
           <input
@@ -42,6 +56,11 @@ const SubmissionForm = () => {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
+          />
+          <ValidationError 
+            prefix="Email" 
+            field="email"
+            errors={state.errors}
           />
         </div>
         <div className="mb-4">
@@ -61,6 +80,7 @@ const SubmissionForm = () => {
         <button
           className="fixed submitButton text-md bg-lColor hover:bg-dColor text-dColor hover:text-lColor hover:drop-shadow-outGlow font-titleFont py-2 px-4 rounded-xl nocursor btn"
           type="submit"
+          disabled={state.submitting}
         >
           Let it goo ~
         </button>
